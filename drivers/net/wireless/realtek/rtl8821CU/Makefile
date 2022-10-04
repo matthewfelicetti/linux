@@ -17,6 +17,8 @@ EXTRA_CFLAGS += -Wno-date-time	# Fix compile error && warning on gcc 4.9 and lat
 endif
 
 EXTRA_CFLAGS += -I $(srctree)/$(src)/include
+EXTRA_CFLAGS += -I $(srctree)/$(src)/hal/phydm
+EXTRA_CFLAGS += -I $(srctree)/$(src)/platform
 #EXTRA_CFLAGS += -I/drivers/net/wireless/realtek/rtl8821CU/include
 
 
