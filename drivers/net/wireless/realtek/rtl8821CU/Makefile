@@ -24,7 +24,7 @@ endif
 EXTRA_CFLAGS += -I $(srctree)/$(src)/include
 EXTRA_CFLAGS += -I $(srctree)/$(src)/hal/phydm
 EXTRA_CFLAGS += -I $(srctree)/$(src)/platform
-EXTRA_CFLAGS += -I $(srctree)/$(src)/core/crypto
+EXTRA_CFLAGS += -I $(srctree)/$(src)/core
 
 EXTRA_LDFLAGS += --strip-debug
 
@@ -212,7 +212,8 @@ CONFIG_CUSTOMER_HUAWEI_GENERAL = n
 
 CONFIG_DRVEXT_MODULE = n
 
-export TopDIR ?= $(shell pwd)
+#export TopDIR ?= $(shell pwd)
+export TopDIR ?= $(srctree)/$(src)/
 
 ########### COMMON  #################################
 ifeq ($(CONFIG_GSPI_HCI), y)
