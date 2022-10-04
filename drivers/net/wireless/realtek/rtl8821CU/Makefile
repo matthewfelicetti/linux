@@ -16,8 +16,8 @@ ifeq ($(GCC_VER_49),1)
 EXTRA_CFLAGS += -Wno-date-time	# Fix compile error && warning on gcc 4.9 and later
 endif
 
-#EXTRA_CFLAGS += -I$(src)/include
-EXTRA_CFLAGS += -I/drivers/net/wireless/realtek/rtl8821CU/include
+EXTRA_CFLAGS += -I $(srctree)/$(src)/include
+#EXTRA_CFLAGS += -I/drivers/net/wireless/realtek/rtl8821CU/include
 
 
 
@@ -166,7 +166,7 @@ CONFIG_PLATFORM_ZTE_ZX296716 = n
 
 CONFIG_DRVEXT_MODULE = n
 
-export TopDIR ?= /drivers/net/wireless/realtek/rtl8821CU/
+export TopDIR ?= $(shell pwd)
 
 ########### COMMON  #################################
 ifeq ($(CONFIG_GSPI_HCI), y)
