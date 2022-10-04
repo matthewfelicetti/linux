@@ -17,8 +17,7 @@ EXTRA_CFLAGS += -Wno-date-time	# Fix compile error && warning on gcc 4.9 and lat
 endif
 
 #EXTRA_CFLAGS += -I$(src)/include
-EXTRA_CFLAGS += -I/home/matt
-EXTRA_CFLAGS += -I/linux-h616/linux/drivers/net/wireless/realtek/rtl8821CU/include
+EXTRA_CFLAGS += -I/linux/drivers/net/wireless/realtek/rtl8821CU/include
 
 
 
@@ -167,7 +166,8 @@ CONFIG_PLATFORM_ZTE_ZX296716 = n
 
 CONFIG_DRVEXT_MODULE = n
 
-export TopDIR ?= $(shell pwd)
+#export TopDIR ?= $(shell pwd)
+export TopDIR ?= /linux/drivers/net/wireless/realtek/rtl8821CU/
 
 ########### COMMON  #################################
 ifeq ($(CONFIG_GSPI_HCI), y)
