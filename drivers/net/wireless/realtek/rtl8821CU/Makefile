@@ -24,7 +24,7 @@ endif
 EXTRA_CFLAGS += -I $(srctree)/$(src)/include
 EXTRA_CFLAGS += -I $(srctree)/$(src)/hal/phydm
 EXTRA_CFLAGS += -I $(srctree)/$(src)/platform
-EXTRA_CFLAGS += -I $(srctree)/$(src)/core
+EXTRA_CFLAGS += -I $(srctree)/$(src)/core/crypto
 
 EXTRA_LDFLAGS += --strip-debug
 
@@ -2567,4 +2567,3 @@ clean:
 	rm -fr Module.symvers ; rm -fr Module.markers ; rm -fr modules.order
 	rm -fr *.mod.c *.mod *.o .*.cmd *.ko *~
 	rm -fr .tmp_versions
-endif
