@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
-config RTL8188FU
-	tristate "Realtek 8188F USB WiFi"
+config RTL8188FU_ARM
+	tristate "Realtek 8188F ARM USB WiFi"
 	depends on USB
 	help
-	  Help message of RTL8818FU
+	  Help message of RTL8818FU_ARM
 
