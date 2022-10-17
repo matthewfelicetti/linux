@@ -17,8 +17,8 @@ EXTRA_CFLAGS += -Wno-unused
 #EXTRA_CFLAGS += -Wno-uninitialized
 #EXTRA_CFLAGS += -Wno-error=date-time	# Fix compile error on gcc 4.9 and later
 
-EXTRA_CFLAGS += -I$(src)/include
-EXTRA_CFLAGS += -I$(src)/hal/phydm
+EXTRA_CFLAGS += -I $(srctree)/$(src)/include
+EXTRA_CFLAGS += -I $(srctree)/$(src)/hal/phydm
 
 EXTRA_LDFLAGS += --strip-debug
 
@@ -173,7 +173,7 @@ _OUTSRC_FILES := hal/phydm/phydm_debug.o	\
 		hal/phydm/txbf/haltxbfinterface.o
 
 ifeq ($(CONFIG_BT_COEXIST), y)
-EXTRA_CFLAGS += -I$(src)/hal/btc
+EXTRA_CFLAGS += -I $(srctree)/$(src)/hal/btc
 _OUTSRC_FILES += hal/btc/HalBtc8192e1Ant.o \
 				hal/btc/HalBtc8192e2Ant.o \
 				hal/btc/HalBtc8723b1Ant.o \
