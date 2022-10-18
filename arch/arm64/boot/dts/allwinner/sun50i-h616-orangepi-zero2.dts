@@ -258,5 +258,5 @@
 &uart5 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart5_ph_pins>;
-	status = "disabled";
+	status = "okay";
 };
