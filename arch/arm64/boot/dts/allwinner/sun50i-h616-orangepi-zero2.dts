@@ -18,6 +18,7 @@
 	aliases {
 		ethernet0 = &emac0;
 		serial0 = &uart0;
+		serial5 = &uart5;
 	};
 
 	chosen {
@@ -252,4 +253,10 @@
 &usbphy {
 	usb1_vbus-supply = <&reg_usb1_vbus>;
 	status = "okay";
+};
+
+&uart5 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart5_ph_pins>;
+	status = "disabled";
 };
